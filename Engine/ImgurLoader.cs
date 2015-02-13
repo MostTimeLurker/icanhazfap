@@ -93,6 +93,7 @@ namespace Engine
                     if (local_url.Contains("/a/"))
                     {
                         //Console.WriteLine("Ein Album");
+                        //dateigroesse!
                         wc.DownloadFile(local_url + "/zip", targetDirectory + dateiName + ".zip");
                     }
                     else
