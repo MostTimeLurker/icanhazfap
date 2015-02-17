@@ -31,36 +31,11 @@ namespace simpleConsole
 
             rl.doGetUserFromList(rl.savedItems.Keys.ToList());
             
-            // rl.doSaveUserUrlList(@"d:\reddit_urls_saved-20150215.txt");
 
-            //return;
-
-            //rl.doGetUser("babygirrrl");
-            //rl.doSaveUserUrlList(@"d:\myuser_urls_json.txt");
-            //rl.doLoadUserUrlList(@"d:\myuser_urls_json.txt");
-            //rl.doLoadUserUrlList(@"d:\userurl-021.txt");
-
-            //ImgurLoader il = new ImgurLoader(logger, "5f673558dd0d8ad");
             ImgurLoader il = new ImgurLoader(logger, System.Configuration.ConfigurationManager.AppSettings["imgurKey"], @"D:\Downloads\_xgur\__xperiment3\");
             //il.CheckCredits();
-
-            //il.doDownload_vidme("https://vid.me/zo3o", "xxx");
-
-            //il.doDownload_Image("http://imgur.com/a/uCGz5", "temp");
-            //return;
-
-            //il.doDownload_gfycat("http://gfycat.com/BrilliantTemptingBubblefish", "wersame");
-            //il.doDownload_vidble("http://www.vidble.com/album/RBNPNdqI", "weresame");
-            //il.doDownload_vidble("http://www.vidble.com/show/JlKo18As8c", "weresame");
-            //il.doLoad("babygirrrl", rl.userUrls["babygirrrl"]);
-
-            //il.doGetInfo_Image("http://imgur.com/a/uCGz5");
-
-            /* */
             try
             {
-                //il.doDownload_Album("http://imgur.com/a/RS8WR", @"babygirrrl");
-                //il.doDownload_List("babygirrrl", rl.userUrls["babygirrrl"]);
                 int i = 0;
 
                 foreach (KeyValuePair<string, List<string>> userUrl in rl.userUrls)
@@ -78,21 +53,6 @@ namespace simpleConsole
             }
             /**/
             return;
-
-            //rl.runSaved("IchLeseMit", new List<string>(), null);
-
-            //Loader loader = new Loader();
-
-            //StreamWriter sw = new StreamWriter(@"d:\saveduser.txt", true);
-            //sw.AutoFlush = true;
-
-            //foreach (string user in rl.userList)
-            //{
-            //    Console.WriteLine("Lade " + user);
-            //    sw.WriteLine(user);
-            //}
-
-            //sw.Close();
 
 
             StreamReader sr =  new StreamReader(@"d:\saveduser.txt");
@@ -113,38 +73,6 @@ namespace simpleConsole
                 loader.Run(u);
             }
 
-            //loader.Run()
-
-            //rl.doGetLinksFromUser("hisfavoritetoy", "xx", null, null);
-            return;
-
-            /*
-            List<String> url = new List<String>()
-                {
-                    "alexandraballerina",
-                    "masterslittletoy",
-                    "the_crema",
-                    "mrmacster",
-                    "Papaya_flight",
-                    "CatchAsCatCan",
-                    "Mandsb",
-                    "SirPlusPet",
-                    "grabmyassets",
-                    "mixedcpl",
-                    "LilMissScientist",
-                    "dingodile69"
-
-                };
-             * */
-            //Loader l = new Loader();
-            //l.Run("itsnotp0rn");
-            //l.RunFromList();
-
-            //foreach (string u in url)
-            //{
-            //    Console.WriteLine("lade " +u);
-            //    l.Run(u);
-            //}
         }
     }
 }
