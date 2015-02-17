@@ -1,4 +1,5 @@
 Thumbs.db
+*.config
 *.obj
 *.exe
 *.pdb
@@ -23,6 +24,7 @@ Thumbs.db
 *.sbr
 obj/
 [Rr]elease*/
+[Pp]roperties*/
 _ReSharper*/
 [Tt]est[Rr]esult*
 *.vssscc

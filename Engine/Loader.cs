@@ -67,7 +67,7 @@ namespace Engine
             sw.Close();
         }
 
-        public Boolean Run(String user, String target = @"D:\Downloads\_xgur\__xperiment\")
+        public Boolean Run(String user, String target = @"D:\Downloads\_xgur\__xperiment2\")
         {
             List<String> urlHistorie = new List<String>();
             String s = "";
@@ -96,15 +96,17 @@ namespace Engine
             StreamWriter swHistorie = new StreamWriter(targetDirectory + @"_historie.txt", true);
             swHistorie.AutoFlush = true;
 
-            RedditLoader rl = new RedditLoader();
-            rl.run(user, target, urlHistorie, swHistorie);
+            RedditLoader rl = new RedditLoader(null, null);
 
-            ImgurLoader il = new ImgurLoader();
-            il.doGetImagesFromList(rl.urlList, user, target, swHistorie);
+            //rl.runUser(user, urlHistorie, swHistorie);
 
-            swHistorie.Close();
+            //ImgurLoader il = new ImgurLoader();
+            //il.doGetImagesFromList(rl.urlList, user, target, swHistorie);
 
-            return il.bFehler;
+            //swHistorie.Close();
+
+            //return il.bFehler;
+            return false;
         }
 
         public void generateUserList(String datei)
